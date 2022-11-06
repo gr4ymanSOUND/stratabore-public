@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>StrataBore</title>
+	<link rel="stylesheet" href="styles/StrataStyle2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar" id="navcontainer">
+        <img id="logo" src="img/stratabore-logo-transparent.png" alt="Logo">
+        <div class="other-nav">
+            <a href="index.html">Home</a>
+            <a href="thecompany.html">The Company</a>
+            <a href="theboss.html">The Bosses</a>
+            <a href="contactinfo.html">Contact Info</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+    </nav>
+</header>
+
+<div class="mid-section" id="midsection">
+
+    <main>
+        <article>
+            <h1 class="article-header">About StrataBore</h1>
+            <section>
+                <img class="center-pic" src="img/in-the-field.JPG" alt="A drill rig out in the field with the mast up" >
+                <p>StrataBore provides a range of Geotechnical drilling services across the DFW Metroplex and North Texas. With our central location and our fleet of [description of size of fleet and types of trucks/equipment], we have the capability to handle any job in any location.</p>
+                <p>For more detailed information about our services and pricing, please <a href="contactinfo.html">contact us</a>.</p>
+            </section>
+        </article>    
+    </main>
+
+</div>
+
+<footer>
+    <div class="copyright-login">
+        <p>&copy; 2021 StrataBore LLC</p><p class="big-vert-line">|</p>
+        <p><a href="../projects.html">Employee Login / Return to ThatOneSite</a></p>
+    </div>
+</footer>
+
+<!-- script to change the class of the responsive nav container when you click on the icon link, which opens the navbox with the options-->
+
+<script>
+    function myFunction() {
+      let x = document.getElementById("navcontainer");
+      if (x.className === "navbar") {
+        x.className += " responsive";
+      } else {
+        x.className = "navbar";
+      }
+      let y = document.getElementById("midsection");
+      if (y.className === "mid-section") {
+        y.className += " responsive";
+      } else {
+        y.className = "mid-section";
+      }
+    }
+</script>
+
+</body>
+</html>

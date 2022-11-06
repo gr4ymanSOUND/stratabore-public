@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>StrataBore</title>
+	<link rel="stylesheet" href="styles/StrataStyle2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar" id="navcontainer">
+        <img id="logo" src="img/stratabore-logo-transparent.png" alt="Logo">
+        <div class="other-nav">
+            <a href="index.html">The Company</a>
+            <a href="theboss.html">The Bosses</a>
+            <a href="contactinfo.html">Contact Info</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+    </nav>
+</header>
+
+<div class="mid-section" id="midsection">
+
+    <main>
+        <article>
+            <h1 class="article-header">The Bosses</h1>
+            <section>
+                <h1>About the Owner: Tommy</h1>
+                <img class="center-pic" src="img/IMG_2361.jpg"  alt="Picture of Tommy">
+                <p>Tommy Lawrence started StrataBore in [year] after [more than 15 years] of experience in the industry. During that time, he worked in the field, in the lab, and in the office managing multiple crews and teams. As he gained knowledge and insight into the business side of things, he saw opportunities to make improvements throughout the business as a whole. He put that into action by starting his own business.</p>
+                <p>Thanks to his experience and expertise, [12+?] years after making that jump StrataBore is operating [how many?] rigs reaching across the entire DFW metroplex area and beyond. With good weather and a full crew, we can drill up to [# of jobs per week or maybe average feet per day? something like that].</p>
+            </section> 
+            <section>
+                <h1>About Wayne</h1>
+                <img  class ="center-pic" src="" alt="Picture of Wayne">
+                <p>Wayne Linn has been a colleague and partner of Tommy's in the drilling business for many years, and was the first person to join him at StrabaBore after it was founded. With plenty of experience in all facets of the business, he assists Tommy in running the crews and is a crucial part of the company and team.</p>
+            </section>    
+        </article>      
+    </main>
+
+</div>
+
+<footer>
+    <div class="copyright-login">
+        <p>&copy; 2021 StrataBore LLC</p><p class="big-vert-line">|</p>
+        <p><a href="../projects.html">Employee Login / Return to ThatOneSite</a></p>
+    </div>
+</footer>
+
+<!-- script to change the class of the responsive nav container when you click on the icon link, which opens the navbox with the options-->
+
+<script>
+    function myFunction() {
+      let x = document.getElementById("navcontainer");
+      if (x.className === "navbar") {
+        x.className += " responsive";
+      } else {
+        x.className = "navbar";
+      }
+      let y = document.getElementById("midsection");
+      if (y.className === "mid-section") {
+        y.className += " responsive";
+      } else {
+        y.className = "mid-section";
+      }
+    }
+</script>
+
+</body>
+</html>
