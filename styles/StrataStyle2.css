@@ -9,9 +9,12 @@ html {
 }
 
 body {
-    display: block;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
     margin: 0;
     width: 100vw;
+    min-height: 100vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(48, 48, 48);
 }
@@ -141,8 +144,7 @@ p a:hover {
     justify-content: center;
     align-items: center;
     margin: 0;
-    padding-bottom: 2rem;
-    
+    padding-bottom: 1rem;
 }
 
 .large-pic-container{
@@ -163,7 +165,7 @@ p a:hover {
     max-width: 1080px;
 }
 
-/* Tagline and Info sections */
+/* Article sections */
 
 .art-left {
     display: flex;
@@ -177,10 +179,14 @@ p a:hover {
     border: 1px red solid;
 }
 
-.right-pic {
+.right-pic-solo {
     height: auto;
     width: 45%;
     max-width: 600px;
+}
+
+.right-pic-container {
+    display: none;
 }
 
 .info-left {
@@ -239,8 +245,7 @@ footer {
 .big-vert-line {
     font-weight: normal;
     font-size: 1.5rem;
-    margin-top: .15rem;
-    margin-bottom: auto;
+    margin: .15rem .5rem auto .5rem;
 }
 
 footer p {
@@ -262,6 +267,8 @@ footer a:hover {
 
 
 @media only screen and (max-width: 740px) { 
+
+/* Header */
 
     header {
         display: block;
@@ -304,8 +311,9 @@ footer a:hover {
         display: block;
     }
 
+/* Content */
+
     .mid-section {
-        /* font-size: 85%; */
         margin-top: 0;
     }
 
@@ -316,8 +324,40 @@ footer a:hover {
         max-width: none;
     }
 
+    .section-header {
+        padding: .5rem 1.5rem .5rem .5rem;
+        margin: 0 -8rem 0 -1rem;
+        /* text-align: left; */
+    }
+
     .art-left {
-        flex-direction: column;
+        padding: 0rem .25rem 2rem .25rem;
+    }
+
+    .info-left {
+        width: 65vw;
+        padding: 0 .5rem 0 .5rem;
+        margin: .5rem 0 0 0rem;
+        align-self: stretch;
+    }
+
+    .right-pic-solo {
+        display: none;
+    }
+
+    .right-pic-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 35vw;
+        overflow: hidden;
+        height: 450px;
+    }
+
+    .right-pic {
+        width: auto;
+        height: 500px;
+        margin-right: -1rem;
     }
 
     .article-header {
@@ -328,6 +368,8 @@ footer a:hover {
         width: 100%;
         height: 400px;
     }
+
+/* Footer */
 
     .copyright-login {
         font-size: .6rem;
