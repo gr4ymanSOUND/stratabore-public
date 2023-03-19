@@ -11,7 +11,7 @@
 
 <header>
     <nav class="navbar" id="navcontainer">
-        <img id="logo" src="img/stratabore-logo-transparent.png" alt="Logo">
+        <img id="logo" class="big" src="img/stratabore-logo-transparent.png" alt="Logo">
         <div class="other-nav">
             <a href="index.html">The Company</a>
             <a href="contactinfo.html">Contact Info</a>
@@ -46,7 +46,6 @@
     <img class="right-pic-solo" src="img/in-the-field.JPG">
   </article>
 
-
 </div>
 
 <footer>
@@ -57,17 +56,34 @@
     </div>
 </footer>
 
-<!-- script to change the class of the responsive nav container when you click on the icon link, which opens the navbox with the options-->
+<!-- scripts for dynamic content -->
 
 <script>
+// change the class of the responsive nav container when you click on the icon link, which opens the navbox with the options
     function openNav() {
-      let x = document.getElementById("navcontainer");
-      if (x.className === "navbar") {
-        x.className += " responsive";
+      let nav = document.getElementById("navcontainer");
+      if (nav.className === "navbar") {
+        nav.className += " responsive";
       } else {
-        x.className = "navbar";
+        nav.className = "navbar";
       }
     }
+
+    // When the user scrolls down from the top of the document, resize the logo
+    function scrollFunction() {
+      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.getElementById("logo").className = 'smol';
+      } else {
+        document.getElementById("logo").className = 'big';
+      }
+    }
+    // initiate the scroll function 
+    // but only if not in mobile view
+    window.onscroll = function() {
+      if (window.innerWidth > 740) {
+        scrollFunction()
+      }
+    };
 </script>
 
 </body>

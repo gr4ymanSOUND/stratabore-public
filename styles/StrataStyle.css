@@ -30,20 +30,44 @@ header {
 }
 
 #logo {
+    position: fixed;
+    top: 0;
+    left: 0;
     height: auto;
-    width: 125px;
     margin-bottom: -.7rem;
     margin-top: -.3rem;
     margin-left: 2rem;
+    transition: .5s;
+}
+
+.smol {
+  width: 150px; 
+}
+
+.big {
+  width: 400px;
+}
+
+#contactlogo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: auto;
+  width: 150px;
+  margin-bottom: -.7rem;
+  margin-top: -.3rem;
+  margin-left: 2rem;
+  transition: .5s;
 }
 
 .navbar {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: stretch;
     padding-top: 0;
     width: 100vw;
+    height: 4.5rem;
     font-size: 1.2rem;
     background-image: linear-gradient(120deg, rgb(158, 158, 158), rgb(180, 180, 180));
     border-bottom: 2px rgb(224, 194, 22) solid;
@@ -294,6 +318,13 @@ footer a:hover {
 
 }
 
+/* special split point for fitting the logo between full size screen and mobile view  */
+@media only screen and (max-width: 1000px) {
+  .big {
+    width: 275px;
+  }
+}
+
 
 @media only screen and (max-width: 740px) { 
 
@@ -308,6 +339,8 @@ footer a:hover {
 
     .navbar {
         display: block;
+        min-height: 4rem;
+        height: auto;
     }
 
     .other-nav {
@@ -315,7 +348,16 @@ footer a:hover {
     }
 
     #logo {
-        height:fit-content;
+        height: fit-content;
+        width: 100px;
+        margin-right: 0;
+        margin-top: 0;
+        margin-top: -.25rem;
+        margin-left: 1rem;
+    }
+
+    #contactlogo {
+        height: fit-content;
         width: 100px;
         margin-right: 0;
         margin-top: 0;
@@ -339,6 +381,7 @@ footer a:hover {
 
     .responsive .other-nav {
         display: block;
+        padding-top: 3.5rem;
     }
 
 /* Content */
